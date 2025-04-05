@@ -21,3 +21,6 @@ def submit_schedule(request):
         )
         return JsonResponse({'status': 'schedule received'})
     return JsonResponse({'error': 'Only POST allowed'}, status=405)
+
+def get_schedules(request):
+    return JsonResponse({'schedules': []})
